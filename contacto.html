@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="stylesheet" href="js/contacto.js">
+    <link rel="shortcut icon" href="logo la tortuguita.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta name="description" content="Formulario de contacto y redes">
+    <meta name="keywords"  content="contacto, redes, instagram, facebook, whatsapp">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+  </head>
+<body>
+  <nav>
+     <article class="titulo--index">
+       <h1 id="tituloprincipal">Nos pondremos en contacto</h1>
+     </article>
+    </nav>
+ 
+ 
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/logo la tortuguita.jpg" alt="logo" width="90px" height="90px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historia.html">Historia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="talleres.html">Talleres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="galeria.html">Galeria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ubicacion.html">Ubicación</a>
+        </li>
+       
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" type="Buscar">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+ 
+<section class="formulario">
+<form action="" method="POST" id="formulario">
+    <fieldset class="container">
+      <legend class="titulo_formulario">Nos contactaremos contigo</legend>
+      <div class="clearfix">
+        <img src="img/jugando.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+      <div>
+        <label class="text-formulario_leter" for="nombre de padre, madre o tutor">Nombre de padre, madre o tutor:</label>
+        <input class="text-formulario_leter" type="text" id="nombrePadre" name="nombre de padre, madre o tutor" placeholder="nombre de padre madre o tutor" required></imput>
+      </div>
+ 
+      <div>
+        <label class="text-formulario_leter" for="nombre del ninio"  name="ninio">Nombre del niño/a:</label>
+        <input class="text-formulario_leter" type="text" id="nombreNinio" name="nombre del ninio" placeholder="nombre del niño/a" required> </input>
+      </div>
+
+      <div>
+        <label class="text-formulario_leter" for="Fecha de nacimiento">Fecha de nacimiento del niño/a:</label>
+        <input id="cumple" onblur='calculadorDeDias()' type="date"/>
+        <p id="resultado"></p>
+
+      </div>
+ 
+        <div>
+            <label class="text-formulario_leter" for="genero">Genero:</label>
+            <input class="text-formulario_leter" type="radio" name="genero" value="Masculino"> Masculino
+   
+            <input type="radio" name="genero" value="Femenino"> Femenino
+          </div>
+   
+          <div>
+            <label class="text-formulario_leter" for="horario">Horario:</label>
+            <input class="text-formulario_leter" type="checkbox" name="horario" value="Maniana"> Mañana
+            <input class="text-formulario_leter"  type="checkbox" name="horario" value="Tarde"> Tarde
+           
+   
+          </div>
+   
+          <div>
+            <label class="text-formulario_leter" for="sala">sala</label>
+            <select class="text-formulario_leter" name="sala">
+              <option class="text-formulario_leter" value=""></option>
+              <option class="text-formulario_leter" value="sala de 0 anios">sala de 0 años</option>
+              <option class="text-formulario_leter" value="sala de 1 y 2 anios">sala de 1 y 2 años</option>
+              <option class="text-formulario_leter" value="sala de 3 y 4 anios">sala de 3 y 4 años</option>
+            </select>
+          </div>
+   
+         
+          <div>
+            <label class="text-formulario_leter" for="cantidad de horas">cantidad de horas</label>
+            <select class="text-formulario_leter" name="cantidad de horas">
+              <option class="text-formulario_leter" value=""></option>
+              <option class="text-formulario_leter" value="3 horas">3 horas</option>
+              <option class="text-formulario_leter" value="4 horas">4 horas</option>
+              <option class="text-formulario_leter" value="5 horas">5 horas</option>
+              <option class="text-formulario_leter" value="+ de 5 horas">+de 5 horas</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-formulario_leter" for="telefono de contacto">telefono de contacto:</label>
+            <input class="text-formulario_leter" type="text" id="telefono" name="telefono de contacto" placeholder="telefono de contacto" required> </input>
+          </div>
+   
+          <div>
+            <button type="submit" id="btn-reserve" value="enviar" class="btn--enviar"class="text-formulario_leter">Enviar formulario</button>
+            
+          </div>
+       
+        </fieldset>
+    </section>
+</form>
+
+<div class="container" class="alert alert-secondary my-5" role="alert" id="alerta">
+  <h3>Información del Usuario</h3>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Número de orden</th>
+        <th scope="col">Nombre del Padre/Madre/Tutor</th>
+        <th scope="col">Nombre del Niño/a</th>
+        <th scope="col">Telefono de Contacto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="BodyTabla">
+       
+      </tr>
+      <button  type =" button " class =" btn btn-outline-primary w-20 " onclick =" agregar() " > Editar </button>
+      <button  type =" button " class =" btn btn-outline-primary w-20 " onclick =" eliminar() " > Eliminar </button>
+    </tbody>
+  </table>
+</div>
+
+</div>
+ 
+<section class="container">
+    <fieldset>
+    <article>
+        <legend class="titulo_formulario">Tambien podes encontrarnos en:</legend>
+    </article>
+    <article>
+      <div>
+        <img src="img/logo instagram.png" alt="" height="30px" width="30px"/>
+        <a class="pagina" class="btn--instagram" href="https://www.instagram.com/latortuguitamimosa/?igshid=1xa15mq549tdt">Instagram</a>
+      </div>
+      <div>
+        <img src="img/logo facebook.png" alt="" height="30px" width="30px"/>
+        <a class="pagina" class="btn--facebook"href="https://m.facebook.com/Latortuguitamimosa-107867071340088/?ref=py_c">Facebook</a>
+      </div>
+      <div>
+        <img src="img/logo whatsapp.png" alt="" height="30px" width="30px"/>
+        <a class="btn--whatsapp">0351-155403199</a>
+      </div>
+    </article>
+    </fieldset>
+</section>
+ 
+<footer class="container-fluid">
+  <div class="cierre">
+      <h5 class="cierretexto">Jardín maternal y prejardín "La tortuguita Mimosa"</h5>
+ </div>
+</footer>
+ 
+ <div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/bootstrap.js"></script>
+ </div>
+
+
+
+ <script src="./js/contacto.js"></script>
+</body>
+</html>

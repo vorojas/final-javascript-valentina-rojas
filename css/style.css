@@ -1,0 +1,60 @@
+.titulo--index {
+    background-image: linear-gradient(aquamarine, #6eb86e); }
+    .titulo--index #tituloprincipal {
+      align-content: center;
+      font-size: 40px;
+      font-family: arial;
+      font-style: oblique;
+      text-align: center;
+      padding: 15px; }
+
+.titulo- {
+    background-color: lightskyblue; }
+
+.container {
+    margin-top: 100px;
+}
+  
+.titulo_formulario {
+    background-image: linear-gradient(to right, lightgreen, #6eb86e);
+    font-style: italic;
+    font-family: arial;
+    padding: 15px; }
+  
+.text-formulario {
+    background-color: lightpink;
+    font-size: 30px;
+    font-family: arial;
+    font-style: italic; }
+  
+.pagina {
+    font-size: 25px;
+    font-family: arial;
+    font-style: italic;
+    line-height: 20px; }
+  
+.btn, .btn--limpiar, .btn--enviar {
+    background-color: lightgreen;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px; }
+  
+.btn--limpiar {
+    background-color: #da9981; }
+  
+.btn--enviar {
+    background-color: #a8eca8; }
+  
+.ubicacion {
+    background-image: linear-gradient(lightcyan, cyan); }
+
+
+.cierre {
+        background-color: lightgreen; }
+        .cierre .cierretexto {
+          text-align: center;
+          font-family: arial;
+          font-style: oblique;
+          padding: 10px; }
