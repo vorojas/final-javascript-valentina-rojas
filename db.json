@@ -1,11 +1,21 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "hello"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+
+"entradas" : [
+              {
+                "nombrePadre" : " Andres ",
+                "nombreNinio" : " Mateo " ,
+                "Telefono" : " 351695281 " ,
+              },
+
+              {
+                "nombrePadre" : " Romina ",
+                "nombreNinio" : " Gianluca " ,
+                "Telefono" : " 3515403199 " ,
+              },
+
+              {
+                "nombrePadre" : " Cristina ",
+                "nombreNinio" : " Catalina " ,
+                "Telefono" : " 3513997509 " ,
+              },
   }
-}
+  ]
