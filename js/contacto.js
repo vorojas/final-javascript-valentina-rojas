@@ -71,9 +71,11 @@ formularioElement.addEventListener('submit', function(e) {
         Swal.fire('Todos los datos son obligatorios');
         setTimeout() ; {
             agregar();
-          }
-    }
-}
+          } 
+
+        };
+
+    
 
 
   //carga los registros desde el localstorage si existen. Caso contrario los trae desde la API jsonplaceholder personalizada
@@ -157,4 +159,4 @@ formularioElement.addEventListener('submit', function(e) {
     }
 
 
-    guardar_localstorage ();
+    guardar_localstorage ()
