@@ -50,7 +50,7 @@ function calculadorDeDias() {
 
     let  archivoAlumnos=  [ ] ;
 
-// Funcion para agregar sweetalet
+// Funcion para agregar libreria
 
 let formularioElement = document.getElementById("formulario");
 formularioElement.addEventListener('submit', function(e) {
