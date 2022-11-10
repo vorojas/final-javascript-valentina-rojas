@@ -1,5 +1,16 @@
-
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
 "entradas" : [
+  
               {
                 "nombrePadre" : " Andres ",
                 "nombreNinio" : " Mateo " ,
