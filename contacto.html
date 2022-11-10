@@ -12,10 +12,8 @@
     <meta name="description" content="Formulario de contacto y redes">
     <meta name="keywords"  content="contacto, redes, instagram, facebook, whatsapp">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+    
     
   </head>
 <body>
@@ -141,7 +139,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Número de orden</th>
+        <th scope="col">ID</th>
         <th scope="col">Nombre del Padre/Madre/Tutor</th>
         <th scope="col">Nombre del Niño/a</th>
         <th scope="col">Telefono de Contacto</th>
@@ -149,7 +147,24 @@
     </thead>
     <tbody>
       <tr id="BodyTabla">
-       
+        <tr>
+          <th scope="row">1</th>
+          <td>luis</td>
+          <td>Otto</td>
+          <td>3513997507</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>German</td>
+          <td>Pia</td>
+          <td>356922854</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Romina</td>
+          <td>Gianluca</td>
+          <td>328845632</td>
+        </tr>
       </tr>
       <button  type =" button " class =" btn btn-outline-primary w-20 " onclick =" agregar() " > Editar </button>
       <button  type =" button " class =" btn btn-outline-primary w-20 " onclick =" eliminar() " > Eliminar </button>
@@ -187,14 +202,9 @@
  </div>
 </footer>
  
- <div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.bundle.js"></script>
-  <script src="js/bootstrap.js"></script>
- </div>
 
-
-
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <script src="./js/contacto.js"></script>
 </body>
 </html>

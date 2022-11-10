@@ -21,7 +21,7 @@
 
 
 
-
+//Funcion que calcula el dia de cumpleaños y cuantos dias le faltan para pasar a la proxima sala
 function CumpleañosySala () {
     let hoy = new date();
     document.getElementById("cumple").max = hoy.getFullYear() + "-" +
@@ -48,13 +48,9 @@ function calculadorDeDias() {
     };
 
 
+    let  archivoAlumnos=  [ ] ;
 
-    let leerInput = ( event )=>{
-        console.log (event.target.value)
-    }
-
-
-
+// Funcion para agregar sweetalet
 
 let formularioElement = document.getElementById("formulario");
 formularioElement.addEventListener('submit', function(e) {
@@ -63,7 +59,7 @@ formularioElement.addEventListener('submit', function(e) {
     let nombrePadre = document.querySelector ('#nombrePadre').value
     let nombreNinio =  document.querySelector ('#nombreNinio').value
     let telefono = document.querySelector ('#telefono').value
-    let archivoAlumnos = [];
+    
 
     if( nombrePadre && nombreNinio && telefono){
         Swal.fire({
@@ -71,23 +67,52 @@ formularioElement.addEventListener('submit', function(e) {
             showCancelButton: true,
             confirmButtonText: "Guardar",
             cancelButtonText: "Cancelar",
-    })
-    if(nombrePadre != "" && nombreNinio != "" && telefono != ""){
-        let alumno = new alumno(generarID(),nombrePadre,nombreNinio,telefono);
-        archivoAlumnos.push(alumno);
-        localStorage.archivoAlumnos = JSON.stringify(archivoAlumnos); //guarda en local storage
-        representaArreglo(archivoAlumnos);
-    } else {
+    })}else {
         Swal.fire('Todos los datos son obligatorios');
         setTimeout() ; {
             agregar();
           }
     }
+}
+
+
+  //carga los registros desde el localstorage si existen. Caso contrario los trae desde la API jsonplaceholder personalizada
+    const obtenerData = async () =>{
+        try {
+            const origen = await axios.get(`https://my-json-server.typicode.com/vorojas/final-javascript-valentina-rojas/entradas`);
+            console.log("Base de datos de ejemplo cargada");
+            origen.data.forEach(objeto => {
+                archivoAlumnos.push(new Impresion(objeto.id,objeto.nombrePadre,objeto.nombreNinio,objeto.telefono));
+            });
+            representaArreglo();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    if (localStorage.getItem('archivoAlumnos') != null){
+        let entradas = [];
+        entradas = JSON.parse(window.localStorage.getItem('archivoAlumnos'));
+        console.log('Base de datos local cargada')
+        entradas.forEach(objeto => {
+            archivoAlumnos.push(new Impresion(objeto.id,objeto.nombrePadre,objeto.nombreNinio,objeto.telefono));
+        });
+    }else{
+        obtenerData();
+    }   
+
+
+    //Agrega un nuevo alumno a la lista y luego actualiza la tabla para mostrarlo
+    if(nombrePadre != "" && nombreNinio != "" && telefono != ""){
+        let alumno = new alumno(generarID(),nombrePadre,nombreNinio,telefono);
+        archivoAlumnos.push(alumno);
+        localStorage.archivoAlumnos = JSON.stringify(archivoAlumnos); //guarda en local storage
+        representaArreglo(archivoAlumnos);
 
     const mostrarEnLista = (nombrePadre, nombreNinio, telefono) =>{ 
         let Turno = "";
     
-        Turnos ? Turno = "Maniana" : Turno = "Tarde";
+       Turnos ? Turno = "Maniana" : Turno = "Tarde";
     
         document.getElementById('Tabla1').insertRow(-1).innerHTML = `<tr>
             <td>${nombrePadre}</td><td>${nombreNinio}</td><td>${telefono}</td>
@@ -101,8 +126,10 @@ formularioElement.addEventListener('submit', function(e) {
     for(let pair of formularioData.entries()) {
         console.log(pair[0]+ ', '+ pair[1]);
      }
-    });
+    };
 
+
+    //funcion para guardar datos precargados en el localstorage
     function guardar_localstorage(){
         let alumno1 = {
             nombrePadre: "Andrés",
@@ -122,12 +149,10 @@ formularioElement.addEventListener('submit', function(e) {
             telefonoDeContacto: "3513997509",
         }
 
-        let alumno4 = {
              
 
-        }
-
-        localStorage.setItem ("nombre", JSON.stringify(alumno1, alumno2));
+    
+        localStorage.setItem ("nombre", JSON.stringify(alumno1, alumno2, alumno3));
         
     }
 
