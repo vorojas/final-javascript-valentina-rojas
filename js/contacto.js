@@ -141,7 +141,7 @@ formularioElement.addEventListener('submit', function(e) {
 
         let alumno2 = {
             nombrePadre: "Romina",
-            nombreNinio: "Gianluca",
+            nombreNinio: "GianFranco",
             telefonoDeContacto: "3515403199",
         }
 
